@@ -11,11 +11,6 @@ build-type:          Simple
 
 cabal-version:       >=1.10
 
--- text-icu on MacOS X
--- brew install icu4c
-extra-include-dirs: /usr/local/opt/icu4c/include
-extra-lib-dirs:     /usr/local/opt/icu4c/lib
-
 executable gr
   main-is:           gr.hs
   build-depends:     base >=4.7, text-icu >=0.7, pipes >=4.1, cmdargs >=0.10.10, regex-posix >=0.95,
