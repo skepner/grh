@@ -1,0 +1,24 @@
+name:                gr
+version:             1
+synopsis:            Simple recursive grep substitute
+license:             GPL-3
+license-file:        LICENSE
+author:              Eugene Skepner
+maintainer:          github@skepner.eu
+
+category:            Program
+build-type:          Simple
+
+cabal-version:       >=1.10
+
+-- text-icu on MacOS X
+-- brew install icu4c
+extra-include-dirs: /usr/local/opt/icu4c/include
+extra-lib-dirs:     /usr/local/opt/icu4c/lib
+
+executable gr
+  main-is:           gr.hs
+  build-depends:     base >=4.7, text-icu >=0.7, pipes >=4.1, cmdargs >=0.10.10, regex-posix >=0.95,
+                     directory, Cabal, filepath, mtl >=2.1, transformers >=0.3, text >=1.2
+  default-language:  Haskell2010
+  ghc-options:       -W -Wall -O3
